@@ -2,8 +2,8 @@ const request=require('request')
 
 const geocode = (adress, callback) => {
 
-
-    const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(adress) + '.json?bbox=-77.083056,38.908611,-76.997778,38.959167&access_token=pk.eyJ1IjoiYnVnZW56aSIsImEiOiJjazV3YzRkeGQwYTlwM25ta3E3YWxzeHVhIn0.a1hzXnQGNnzwIivPPupqKQ&limit=1'
+    const url="https://api.mapbox.com/geocoding/v5/mapbox.places/"+ encodeURIComponent(adress) + ".json?limit=2&access_token=pk.eyJ1IjoiYnVnZW56aSIsImEiOiJjazV3YzRkeGQwYTlwM25ta3E3YWxzeHVhIn0.a1hzXnQGNnzwIivPPupqKQ"
+  
 
     request({  url, json: true }, (error, {body}) => {
 

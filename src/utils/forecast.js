@@ -1,6 +1,6 @@
 const request=require('request');
 const forecast = (lang, long, callback) => {
-    const url = 'https://api.darksky.net/forecast/22a4b3db13af73dbbc1f3b257c500b44/' + long + ',' + lang
+    const url = 'https://api.darksky.net/forecast/22a4b3db13af73dbbc1f3b257c500b44/' + long + ',' + lang+'?units=si'
 
     request({  url, json: true }, (error, {body}) => {
 
