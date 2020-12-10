@@ -1,4 +1,4 @@
-# My new project
+# Nodejs-weather-app
 
 ## Introduction
 
