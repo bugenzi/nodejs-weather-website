@@ -1,0 +1,9 @@
+.about__container{
+    margin-top: 30%;
+    padding: 30px;
+    border: 1px solid rgb(214, 156, 214);
+}
+
+.about__par{
+    font-size: 20px;
+}
