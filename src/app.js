@@ -18,7 +18,6 @@ app.set("view engine", "hbs");
 app.set("views", viewPath);
 hbs.registerPartials(partialsPath);
 
-
 //Setup static dircetory to serve
 app.use(express.static(publicDir));
 
@@ -29,13 +28,16 @@ app.get("", (req, res) => {
   });
 });
 
-app.get("/about",(req,res)=>{
-    res.render("about",{
-        title:"About",
-        name:"Created by Amar Bugarin",
-        txt1:"This site uses data from mapbox.com and darksky.net  to create"
-    })
-})
+app.get("/about", (req, res) => {
+  res.render("about", {
+    title: "About",
+    name: "Created by Amar Bugarin",
+    txt1:
+      "This site uses data from mapbox.com and darksky.net  to create nodejs weather website while also using handlears ",
+    txt2:
+      "To use this site you need to search the city yout want to display the forcast after that it will show how forcast and recepercation percantage ",
+  });
+});
 app.get("/products", (req, res) => {
   if (!req.query.grad) {
     return res.send({
@@ -43,14 +45,10 @@ app.get("/products", (req, res) => {
     });
   }
 
-  
-
   res.send({
     products: [],
   });
 });
-
-
 
 app.get("/weather", (req, res) => {
   if (!req.query.address) {
@@ -65,7 +63,6 @@ app.get("/weather", (req, res) => {
       if (error) {
         return res.send({ error });
       }
-
 
       forecast(langditude, longditude, (error, forcastData) => {
         if (error) {

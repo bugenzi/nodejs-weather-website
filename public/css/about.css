@@ -1,7 +1,8 @@
 .about__container{
     margin-top: 30%;
     padding: 30px;
-    border: 1px solid rgb(214, 156, 214);
+    border: 1px solid black;
+    background-color: rgba(85, 79, 79, 0.644);
 }
 
 .about__par{

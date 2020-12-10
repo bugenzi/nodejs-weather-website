@@ -1,28 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Wheather</title>
     <link rel="icon" href="/img/weather.png">
-    <link rel="stylesheet" href="./css/style.css"> 
-    
+    <link rel="stylesheet" href="./css/style.css">
+    <link href='https://css.gg/sun.css' rel='stylesheet'>
+
 </head>
+
 <body>
- <div class="main-content">
-     {{>header}}
-     <form>
-         <input placeholder="Search for city">
-         <button>Search</button>
-     </form>
+    <div class="main-content">
+        {{>header}}
+        <div class="main__searchBox">
 
-     <p id="message-1"></p>
-     <p id="message-2"></p>
-     </div>
+            <form>
+                <input placeholder="Search for city name ">
+                <button>Search</button>
+            </form>
+            
+            <p id="temp-value"></p>
+            <p id="message-1"></p>
+            <p id="message-2"></p>
+            <p id="time-value"></p>
+
+            
+        </div>
+
+    </div>
 
 
-{{>footer}}    
-<script src="/js/app.js"></script> 
+    {{>footer}}
+    <script src="/js/app.js"></script>
 </body>
+
 </html>
